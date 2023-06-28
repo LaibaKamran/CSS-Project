@@ -288,7 +288,6 @@ padding: 0;
   .about-us img{
     width: 100%;
     height: auto;
-    /* margin-bottom: 0.5rem; */
   }
 
   .about-us:hover{
@@ -299,10 +298,6 @@ padding: 0;
     position: relative;
     overflow: hidden;
   }
-
-  /* .about-us:hover .about-us-content-wrapper {
-      margin-top: 2rem;
-  } */
 
   .about-us:hover img {
     height: 24vh;
@@ -471,7 +466,7 @@ padding: 0;
     color: #2A312E;
     font-size: smaller;
     border: none;
-    padding: 1rem 2rem;
+    padding: 1rem 2.5rem;
     margin-bottom: 1rem;
   }
 
@@ -560,7 +555,7 @@ padding: 0;
   }
 
   .sub-section:hover{
-    transform: translateY(-10px);
+    transform: translateY(-15px);
   }
 
   .sub-section img{
@@ -682,6 +677,46 @@ padding: 0;
   .footer-bottom p{
     color: #A2A39A;
     line-height: 1.5;
+  }
+
+  .floating-contact-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color:  #998152;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-out;
+  }
+
+  .floating-contact-button:hover {
+    background-color: #333;
+  }
+  
+  .floating-contact-button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  .floating-contact-button:hover::before {
+    content: 'x';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
   }
 
   @media (min-width: 767px) {
@@ -902,10 +937,15 @@ padding: 0;
     justify-content: flex-end;
   }
 
-  .find-home, .buy{
+  .find-home{
     display: block;
     margin: auto;
   } 
+
+  .buy{
+    display: block;
+    justify-self: flex-start;
+  }
 
   .heart-icon{
     display: block;
@@ -1065,4 +1105,27 @@ padding: 0;
     padding: 3rem 4rem;
   }
 
+  }
+
+  @media (min-width: 1439px){
+
+  .second-last-section{
+    display: flex;
+    
+  }
+
+  .sub-section{
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  .sub-section:last-child{
+    margin-right: 0;
+  }
+
+  .sub-section img{
+    width: 100%;
+    height: 15vw;
+  }
+    
   }
