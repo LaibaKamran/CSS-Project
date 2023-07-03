@@ -27,6 +27,7 @@ padding: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.7);
     z-index: 100;
+    backdrop-filter: blur(10px);
 }
 
 .logo{
@@ -287,7 +288,8 @@ padding: 0;
 
   .about-us img{
     width: 100%;
-    height: auto;
+    height: 19rem;
+    object-fit: cover;
   }
 
   .about-us:hover{
@@ -300,7 +302,7 @@ padding: 0;
   }
 
   .about-us:hover img {
-    height: 24vh;
+    height: 17rem;
     transform: scale(1.1);
   }
   
@@ -419,7 +421,8 @@ padding: 0;
 
   .news img{
     width: 100%;
-    height: auto;
+    height: 19rem;
+    object-fit: cover;
   }
 
   .news-image-container{
@@ -451,8 +454,12 @@ padding: 0;
     overflow: hidden;
   }
 
+  .news-sub:hover{
+    cursor: pointer;
+  }
+
   .news-sub:hover img {
-    height: 27vh;
+    height: 16rem;
     transform: scale(1.1);
   }
   
@@ -737,7 +744,7 @@ padding: 0;
     }
 
     .about-us img{
-      height: 20vw;
+      height: 10rem;
       width: 100%
       /* min-height: 150px;
       max-height: 60%; */
@@ -761,6 +768,11 @@ padding: 0;
     margin-right: 0;
   }
 
+  .about-us:hover img {
+    height: 8rem;
+    transform: scale(1.1);
+  }
+
   .image-container{
     margin-bottom: 1.5rem;
   }
@@ -775,7 +787,8 @@ padding: 0;
   }
 
   .news img{
-    height: 15vw;
+    height: 10rem;
+    object-fit: cover;
     width: 100%;
   }
 
@@ -791,6 +804,11 @@ padding: 0;
 
   .news-sub:last-child{
     margin-right: 0;
+  }
+
+  .news-sub:hover img {
+    height: 8rem;
+    transform: scale(1.1);
   }
   
   .news-button {
@@ -916,12 +934,12 @@ padding: 0;
       display: flex;
     }
 
-  .buy-parent{
-    order: 2;
+   .buy-parent{
+      order: 2;
       flex: 1;
       margin: auto;
       display: flex;
-  }
+    }
 
   .heart-parent{
     order: 4;
@@ -944,7 +962,7 @@ padding: 0;
 
   .buy{
     display: block;
-    justify-self: flex-start;
+    margin: auto;
   }
 
   .heart-icon{
@@ -958,10 +976,11 @@ padding: 0;
 
   .background-video {
     height: 700px; 
+    margin-bottom: 5rem;
   }
 
   .background-video_search{
-    height: 7rem;
+    height: 8rem;
     width: 60%;
     padding: 1rem 2rem;
     margin-bottom: 4rem;
@@ -1004,21 +1023,17 @@ padding: 0;
     color: grey;
   }
 
-  .section-2{
-    display: flex;
-    margin: 4rem 3rem;
-  }
-
   .second-block{
-    flex: 1;
-  }
-
-  .images-link-block{
-    flex: 3;
+    margin: 4rem 4rem;
   }
 
   .about-us img{
-    height: 13vw;
+    height: 12rem;
+  }
+
+  .about-us:hover img {
+    height: 10rem;
+    transform: scale(1.1);
   }
 
   .about-us{
@@ -1034,12 +1049,13 @@ padding: 0;
   }
 
   .images-link-block{
-    margin: 2rem 1.7rem;
+    margin: 2rem 3.7rem;
   }
 
   .concierge{
     display: flex;
     flex-direction: row;
+    margin-bottom: 6rem;
   }
 
   .image-div{
@@ -1053,30 +1069,27 @@ padding: 0;
     object-fit: cover;
   }
 
-  .news{
-    display: flex;
-    margin: 6rem 4rem;
-  }
-
-  .news-top{
-    flex: 1;
-  }
-
   .news-top-sub{
-    width: 90%;
-  }
-
-  .parent-news-sub{
-    flex: 3;
+    margin: 3rem 1.5rem;
   }
 
   .news img{
-    height: 15vw;
+    height: 13rem;
+    object-fit: cover;
     width: 100%;
+  }
+
+  .parent-news-sub{
+    margin: 2rem 1.5rem;
   }
 
   .news-sub{
     margin-right: 35px;
+  }
+
+  .news-sub:hover img {
+    height: 11rem;
+    transform: scale(1.1);
   }
 
   .second-last-section{
@@ -1107,11 +1120,49 @@ padding: 0;
 
   }
 
+  @media (min-width: 1298px){
+
+    .news{
+      display: flex;
+      margin: 6rem 4rem;
+    }
+
+    .news-top{
+      flex: 1;
+    }
+  
+    .news-top-sub{
+      width: 90%;
+      margin: 0;
+    }
+  
+    .parent-news-sub{
+      flex: 3;
+      margin: 0;
+    }
+
+    .section-2{
+      display: flex;
+      margin: 4rem 4rem;
+    }
+
+    .second-block{
+      flex: 1;
+      margin: 0;
+    }
+  
+    .images-link-block{
+      flex: 3;
+      margin: 0;
+      margin-left: 2.5rem;
+    }
+
+  }
+
   @media (min-width: 1439px){
 
   .second-last-section{
-    display: flex;
-    
+    display: flex; 
   }
 
   .sub-section{
@@ -1126,6 +1177,29 @@ padding: 0;
   .sub-section img{
     width: 100%;
     height: 15vw;
+  }
+
+  .about-us img{
+    height: 15rem;
+    object-fit: cover;
+  }
+
+  .about-us:hover img {
+    height: 13rem;
+    transform: scale(1.1);
+  }
+
+  .buy{
+    margin-left: 0;
+  }
+
+  .news-sub img{
+    height: 15rem;
+  }
+
+  .news-sub:hover img {
+    height: 13rem;
+    transform: scale(1.1);
   }
     
   }
